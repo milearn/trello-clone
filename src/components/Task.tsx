@@ -6,6 +6,10 @@ interface TaskProps {
     listId: string;
     boardId: string;
     task: TaskState;
+    id: string;
+    handleDragOver;
+    handleDrop;
+    handleDragging;
 }
 
 const Task = (props: TaskProps) => {
@@ -13,7 +17,9 @@ const Task = (props: TaskProps) => {
     const handleTaskStateChange = () => {
         dispatch(changeTaskState({ listId: props.listId, boardId: props.boardId, taskId: props.task.id }))
     }
-    return <div className="task-wrapper">
+
+
+    return <div className="task-wrapper" draggable onDrag={props.handleDragging} onDragOver={props.handleDragOver} onDrop={props.handleDrop} id={props.id}>
         <div className="task-label">
             {props.isCompleted ? <div className="checkmark" onClick={handleTaskStateChange}>&#x2714;</div> : <div className="fake-radio" onClick={handleTaskStateChange}></div>}
 

@@ -119,12 +119,25 @@ export const boardSlice = createSlice({
                 }
             })
             return state;
+        },
+        changeOrderTask: (state: BoardState[], action: PayloadAction<{ boardId: string; listId: string; taskArr: Task[] }>) => {
+            const { boardId, listId, taskArr } = action.payload;
+            state.forEach((board) => {
+                if (board.id === boardId) {
+                    board.lists.forEach((list) => {
+                        if (list.id === listId) {
+                            list.tasks = taskArr;
+                        }
+                    })
+                }
+            })
+            return state;
         }
     }
 })
 export const getBoard = (state: RootState): BoardState[] => state.board;
 
-export const { addBoard, deleteBoard, addList, deleteList, addTask, changeTaskState } = boardSlice.actions;
+export const { addBoard, deleteBoard, addList, deleteList, addTask, changeTaskState, changeOrderTask } = boardSlice.actions;
 export default boardSlice.reducer;
 
 
