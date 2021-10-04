@@ -4,7 +4,8 @@
     background-color: lightgrey;
     border-radius: 6px;
     margin: 10px;
-    padding: 6px 16px;
+    padding: 16px;
+    overflow-x:scroll;
 }
 h2 {    
     margin: 0;
@@ -14,9 +15,10 @@ h2 {
     margin-right: 6px;
 }
 .board-container .board-header {
-
+    margin-bottom:10px;
     display:flex;
     align-items: center;
+    color: #666;
 }
 
 .list-container {

@@ -2,27 +2,29 @@
     height: 100%;
     padding: 10px;
     background: white;
+    border-radius: 4px;
+    box-shadow: 1px 2px 4px 1px #aaa;
+    margin: 0 10px;
 }
 .list-wrapper h3 {
     font-weight: normal;
     margin: 0;
     font-size: 1em;
+    
 }
 .list-header,   
 .complete-task-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 10px;
 }
-.incomplete-task {
-    display: flex;
-    flex-direction: column;
-    width:100%;
-}
+.incomplete-task,
 .complete-task {
     width:100%;
     display: flex;
     flex-direction: column;
+    margin:16px 0;
 }
 .arrow {
     border: solid black;
