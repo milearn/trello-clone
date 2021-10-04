@@ -1,0 +1,27 @@
+.fake-radio {
+    width:14px;
+    height:13px;
+    border: 1px solid grey;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+.task-wrapper {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.task-label {
+    display:flex;
+    align-items:center;
+}
+.delete-task {
+    cursor: pointer;
+}
+.checkmark {
+    margin-right: 12px;
+    color: green;
+}
+span.completed {
+    text-decoration: line-through;
+    color: grey;
+}

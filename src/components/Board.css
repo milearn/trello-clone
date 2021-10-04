@@ -1,0 +1,24 @@
+.board-container {
+    min-height: 200px;
+    width: 100%;
+    background-color: lightgrey;
+    border-radius: 6px;
+    margin: 10px;
+    padding: 6px 16px;
+}
+h2 {    
+    margin: 0;
+
+    font-weight: normal;
+    font-size: 1em;
+    margin-right: 6px;
+}
+.board-container .board-header {
+
+    display:flex;
+    align-items: center;
+}
+
+.list-container {
+    display: flex;
+}
